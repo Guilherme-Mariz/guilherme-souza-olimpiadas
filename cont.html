@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Contato</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="description" content="Página para contato e avaliação do site no geral">
+        <meta name="keywords" content="Olimpíadas, vôlei, Brasil">
+        <meta name="author" content="Guilherme Mariz">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        
+        <link rel="icon" type="jpg" href="img/icone.png">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script language="javascript" type="text/javascript">
+            function validar() {
+                var form = document.forms["contatoForm"];
+                var nome = form["nome"].value;
+                var email = form["email"].value;
+                var idade = form["idade"].value;
+        
+                if (nome === "") {
+                    alert("Preencha o campo com seu nome!");
+                    form["nome"].focus();
+                    return false;
+                }
+        
+                if (email === "") {
+                    alert("Preencha o campo com seu e-mail!");
+                    form["email"].focus();
+                    return false;
+                }
+        
+                if (email.indexOf("@") === -1) {
+                    alert("Preencha o campo com um e-mail válido!");
+                    form["email"].focus();
+                    return false;
+                }
+        
+                if (idade === "") {
+                    alert("Preencha o campo com sua idade!");
+                    form["idade"].focus();
+                    return false;
+                }
+        
+                if (isNaN(idade)) {
+                    alert("Preencha o campo de idade apenas com números!");
+                    form["idade"].focus();
+                    return false;
+                }
+        
+                // Se todos os campos estiverem preenchidos, exibe a mensagem
+                alert("Seus dados foram enviados!");
+                return false; // Impede o envio do formulário
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+        <header>
+            <div class="cabecalho">
+                <div class="logo"><img src="img/logo.png"></div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="sobre.html">SOBRE</a></li>
+                            <li><a href="dest.html">DESTAQUE</a></li>
+                            <li><a href="desafios.html">DESAFIOS</a></li>
+                            <li><a href="med.html">MEDALHAS</a></li>
+                            <li><a href="cont.html">CONTATO</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <section id="contato">
+            <div class="inter_ctt">
+                <h2>FALE <font color="red">COMIGO!</font></h2>
+    
+                <form name="contatoForm" onsubmit="return validar()">
+                    <div class="inf">
+                        <input type="text" name="nome" placeholder="Seu nome completo:">
+                        <input type="text" name="email" placeholder="Seu e-mail:">
+                        <input type="text" name="idade" placeholder="Sua idade:">
+                        <textarea name="opiniao" placeholder="Sua mensagem:"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <div class="bt_env"><input type="submit" value="ENVIAR"></div>
+                        <div class="bt_lim"><input type="reset" value="LIMPAR"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <h5>Guilherme Souza 2024 &copy Todos os direitos reservados <br> TRABALHO ACADÊMICO SEM FINS LUCRATIVOS</h5>
+        </footer>
+        </div>
+    </body>
+</html>

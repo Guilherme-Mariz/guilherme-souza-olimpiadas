@@ -1,0 +1,9 @@
+OLIMPÍADAS 2024: VÔLEI FEMININO
+
+MENU: Logo das Olimpíadas, cores puxadas para o verde, e tópicos abaixo:
+
+Home: Foto do time de vôlei e apresentação do tema: "Olimpíadas 2024: Vôlei Feminino"
+
+Contato: Nome, email, avaliação do site (select), comentário (textarea), validados em javascript
+
+OBS: Layout de 900 px, e responsividade para pelo menos 2 dispositivos
